@@ -1,0 +1,16 @@
+
+  <div class="container" style="margin:20px 200px 20px 200px">
+  <form class="form-inline my-2 my-lg-0 justify-content-between">
+    <button class="btn btn-primary" type="button" id="button-login"  *ngIf="!authService.isLoggedIn" (click)="toLogin()"   ><i></i> Sign In</button>
+    <button class="btn btn-primary" type="button" id="button-singup" *ngIf="authService.isLoggedIn"  (click)="authService.logout()"><i></i> Sign Out </button>
+    <button class="btn btn-success" type="button" id="button-addon"  (click)="postJob()"  *ngIf="userType !== 'User'"><i class="fas fa-bullhorn"></i> Post a Job</button>
+    </form>
+    </div>
+    <div class="container" style="margin:20px 200px 20px 200px">
+      <h2 *ngIf="authService.isLoggedIn"> Welcome, {{ userEmail}} </h2>
+    </div>
+
+    <div class='col-md-12'>
+      <app-jobs></app-jobs>
+    </div>
+   

@@ -1,0 +1,45 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+     <div class="container">
+     
+  <h5 style="text-align: center;"><i class="fas fa-tint class"></i> Design</h5>
+  <hr>
+  <table class="table table-bordered table-hover" id="tbDesign">
+        <thead>
+          <tr>
+              <th scope="col">Location</th>
+              <th scope="col">Position</th>
+              <th scope="col">Company</th>
+          </tr>
+        </thead>
+        <tbody style="cursor:pointer">
+          <tr *ngFor="let job of designJobs" (click)="getDetail(job.company, job.position)">
+            <td>{{job.location}}</td>
+            <td>{{job.position}}</td>
+            <td>{{job.company}}</td>
+          </tr>
+        </tbody>
+      </table>
+  <h5 class="text-center"><i class="fab fa-node-js"></i> Programming</h5>
+  <hr>
+  <table class="table table-bordered table-hover" id="tbProgramming">
+        <thead>
+          <tr>
+              <th scope="col">Location</th>
+              <th scope="col">Position</th>
+              <th scope="col">Company</th>
+          </tr>
+        </thead>
+        <tbody style="cursor:pointer">
+            <tr *ngFor="let job of programmingJobs" (click)="getDetail(job.company, job.position)">
+                <td>{{job.location}}</td>
+                <td>{{job.position}}</td>
+                <td>{{job.company}}</td>
+              </tr>
+        </tbody>
+      </table>
+  </div>
+</body>
